@@ -1,0 +1,14 @@
+.swiper-button-next, .swiper-rtl , .swiper-button-prev{
+    color: red !important;
+    background: transparent !important;
+}
+.swiper-pagination, swiper-pagination-fraction, swiper-pagination-horizontal{
+background: transparent !important;
+}
+.swiper-pagination-total{
+background: transparent !important;
+}
+
+.swiper-pagination-current{
+background: transparent !important;
+}

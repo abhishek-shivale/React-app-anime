@@ -1,0 +1,15 @@
+#input{
+  border-radius: 7px;
+  height: 5vh;
+  background-color: rgb(255, 255, 255);
+  width: 20vw;
+  text-indent: 1vw;
+  caret-color: red;
+}
+#input::placeholder{
+  color: gray;
+  padding: 1vw;
+}
+#input:focus{
+  outline: none;
+}
