@@ -1,9 +1,18 @@
-import React from 'react'
+import { useParams } from 'react-router-dom';
 
-function AnimeInfo() {
+const AnimeInfo = () => {
+  const { animeid } = useParams();
+  const decodedAnimeId = decodeURIComponent(animeid);
+
+  // Remove "anime=" from the beginning of the string
+  const cleanedAnimeId = decodedAnimeId.replace('anime=', '');
+
   return (
-    <div>AnimeInfo</div>
-  )
-}
+    <div>
+      {/* Your AnimeInfo component content */}
+      <h2>Anime ID: {cleanedAnimeId}</h2>
+    </div>
+  );
+};
 
-export default AnimeInfo
+export default AnimeInfo;

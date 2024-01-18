@@ -4,3 +4,15 @@
 *{
   background-color: rgb(12, 12, 12);
 }
+::-webkit-scrollbar{
+  background-color: rgb(0, 0, 0);
+  width: 0.7vw;
+
+}
+::-webkit-scrollbar-thumb{
+  background-color: red;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-corner {
+  background-color: #000; 
+  border-radius: 6px; }
