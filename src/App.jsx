@@ -3,7 +3,6 @@ import { BrowserRouter as Router,Route,Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/navbar'
 import Home from './pages/home'
-import Anime from './pages/animeFile'
 import AnimeInfo from './pages/AnimeInfo'
 function App() {
 
@@ -13,7 +12,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home/> }/>
-        {/* <Route path='/anime' element={<Anime /> }/> */}
         <Route path='/anime/:animeid' element={<AnimeInfo /> }/>
       </Routes>
      </Router>

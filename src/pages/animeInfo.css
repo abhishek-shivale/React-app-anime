@@ -1,0 +1,9 @@
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hidden::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
+  
