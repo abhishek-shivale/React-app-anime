@@ -58,7 +58,7 @@ const AnimeInfo = () => {
         <div className=' bg-transparent w-[600px]'>
           <p className='text-3xl my-5 font-extrabold bg-transparent '>{animes.name}</p>
           <Divcomponent title='HD'/>
-          <Link to={animes.id}><button className='border rounded-xl border-red-600 bg-red-700 px-3 bg-red mb-4 py-2'>Watch-Now</button></Link>
+          <Link to={`/watch/animeid=${animes.id}/episodes=${1}`}><button className='border rounded-xl border-red-600 bg-red-700 px-3 bg-red mb-4 py-2'>Watch-Now</button></Link>
       <div className='bg-transparent text-sm h-56 text-clip overflow-hidden'>
           <p className='text-gray-200 leading-7 bg-transparent overflow-auto max-h-full scrollbar-hidden'>
             {animes.plot_summary}
@@ -69,15 +69,15 @@ const AnimeInfo = () => {
 
           </div>
           <div className='text-xl py-10 px-5 bg-gray-900 w-80'>
-          <Genracomponent title='Other-Names :' info={animes.other_name === '' ? animes.name : animes.other_name}/>
+          <Genracomponent title='Names :' info={animes.other_name === '' ? animes.name : animes.other_name}/>
           <Genracomponent  title='Episodes :' info={ep}/>
           <Genracomponent  title='Release Year :' info={animes.released}/>
           <Genracomponent  title='Type :' info={animes.type}/>
           <Genracomponent  title='Status :' info={animes.status}/>
           <div className='overflow-scroll max-h-48 mb-5 bg-gray-900 scrollbar-hidden'>
           {genre && genre.map((ani) => (
-            <div className='bg-gray-900'>
-            <Genrecomponent key={ani}  title={ani} />
+            <div key={ani}  className='bg-gray-900'>
+            <Genrecomponent  title={ani} />
             </div>
           ))}
           </div>

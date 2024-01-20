@@ -4,6 +4,7 @@ import './App.css'
 import Navbar from './components/navbar'
 import Home from './pages/home'
 import AnimeInfo from './pages/AnimeInfo'
+import Watchanime from './pages/Watchanime'
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/> }/>
         <Route path='/anime/:animeid' element={<AnimeInfo /> }/>
+        <Route path='/watch/:animeid/:episodes' element={<Watchanime/>}></Route>
       </Routes>
      </Router>
     </>

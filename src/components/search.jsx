@@ -28,7 +28,7 @@ function Search() {
   useEffect(()=>{
     if(!input) return
     TIMEOUT_ID = setTimeout(()=>{
-      fetchSearchAnime()
+      fetchSearchAnime() 
     },1000)
     return ()=>clearTimeout(TIMEOUT_ID)
   },[input])
