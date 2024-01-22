@@ -27,9 +27,9 @@ function Recent() {
 
   return (
     < >
-    <h1 className='text-red-700 text-3xl font-extrabold'>Recent</h1>
+    <h1 className='text-white text-3xl font-extrabold'>Recent</h1>
 
-<div className='text-red-700 flex gap-10 w-full flex-wrap'>
+<div className='text-white flex gap-10 w-full flex-wrap'>
     {recent.map((anime) => (
         <Link key={anime.id} to={`/anime/${anime.title}`}>
             <div className='h-80 w-max'>

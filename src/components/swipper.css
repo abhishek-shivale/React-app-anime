@@ -12,3 +12,31 @@ background: transparent !important;
 .swiper-pagination-current{
 background: transparent !important;
 }
+
+  
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+  }
+  
+  .img {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+  }
+  
+  .image-wrapper .shadow {
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    background: transparent;
+    box-shadow: 0px 0px 33px 296px rgb(0 0 0 / 90%);
+    z-index: 2;
+    border-radius: 626px;
+    filter: blur(82px);
+  }

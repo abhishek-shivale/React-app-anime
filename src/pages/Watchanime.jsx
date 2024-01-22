@@ -44,7 +44,7 @@ function Watchanime() {
         }
 
         fetchAnimeData();
-    }, [cleanAnimeId, cleanEpisodeId],ButtonCompo);
+    }, [cleanAnimeId, cleanEpisodeId], ButtonCompo);
     return (
   <div className='container m-auto flex  mb-10'>
     <div className='basis-4/12 aspect-video'></div>

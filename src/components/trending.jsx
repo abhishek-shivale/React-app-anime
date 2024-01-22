@@ -17,7 +17,6 @@ function trending() {
     try {
       const res = await axios.get('https://api.abhishekshivale45.workers.dev/gogoPopular/');
       setSpotlightAnime(res.data.results);
-      console.log(res.data.results)
     } catch (err) {
       console.error(err.message);
     }
@@ -29,7 +28,7 @@ function trending() {
 
   return (
     
-    <div className='text-red-700 text-3xl font-bold py-5'>
+    <div className='text-white text-3xl font-bold py-5'>
         <h1>Trending :</h1>
         <Swiper
         slidesPerView={5}
