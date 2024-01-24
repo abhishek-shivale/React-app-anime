@@ -97,7 +97,7 @@ function VideoPlayer(props) {
 
   return (
     <div className={`container ${isFullscreen ? 'fullscreen' : ''}`}>
-      <video ref={videoRef} className="object-cover aspect-video w-full" />
+      <video ref={videoRef} className="object-cover video aspect-video w-full" />
       <div className="controls">
         <button onClick={handlePlayPause}>
           {isPlaying ? "Pause" : "Play"}

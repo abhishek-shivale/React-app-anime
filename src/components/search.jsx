@@ -47,18 +47,18 @@ function Search() {
           width: '20vw',
           display: isSearchVisible ? 'block' : 'none',
         }}
-        className='bg-gray-950 max-w-96 max-h-80 z-10 absolute overflow-scroll'
+        className='bg-black max-w-96 max-h-80 z-10 absolute overflow-scroll'
       >
         {animeSearched.length === 0 ? (
           <p className='bg-transparent text-white'>No results found</p>
         ) : (
           animeSearched.map((anime) => (
             <Link key={anime.id} to={`/anime/anime=${anime.title}`}>
-              <div className='flex border border-white p-2 bg-transparent'>
-                <div className='h-20 w-20 overflow-hidden bg-transparent'>
+              <div className='flex p-2 bg-transparent'>
+                <div className='h-16 w-14 overflow-hidden bg-transparent'>
                   <img className='w-full h-full object-cover bg-transparent' src={anime.img} alt={anime.title} />
                 </div>
-                <p className='ml-2 bg-transparent text-red-700'>{anime.title}</p>
+                <p className='ml-2 bg-transparent text-white'>{anime.title}</p>
               </div>
             </Link>
           ))

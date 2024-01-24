@@ -15,7 +15,6 @@ const AnimeInfo = () => {
     return (
       <div className='bg-transparent max-h-16 overflow-scroll scrollbar-hidden  my-1'>
       <div className=' bg-transparent flex whitespace-nowrap font-extrabold'>{props.title}
-      
       <div className='bg-transparent font-light px-3 whitespace-normal py-1 text-sm'>{props.info}
       </div>
       </div>
@@ -49,7 +48,7 @@ const AnimeInfo = () => {
   },[])
   return (
     <>
-  <div className='flex rounded-2xl border text-white h-[450px] min-w-screen relative container overflow-hidden m-auto'>
+  <div className='flex rounded-2xl border text-white h-[450px] top-[0%] min-w-screen relative container overflow-hidden m-auto'>
     <div className='absolute top-0 right-0 bottom-0 left-0' style={{backgroundImage: `url(${animes.image})`,
        backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.1, pointerEvents: 'none', }}>
        </div>

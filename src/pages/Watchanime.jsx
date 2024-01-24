@@ -36,7 +36,6 @@ function Watchanime() {
                 const epdata = episodeResponse.data.results.stream.sources[0].file;
                 setStreamUrl(epdata);
                 let len = animeResponse.data.results.episodes
-                // const arr = len.split(' ')
                 setepArry(len)
             } catch (error) {
                 console.error('Error fetching data:', error.message);
