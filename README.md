@@ -1,6 +1,9 @@
 # Anime Web Application
 
-![Anime Web App]()
+![Anime Web App](https://github.com/abhishek-shivale/React-app-anime/blob/master/src/assets/anime.png)
+![](https://github.com/abhishek-shivale/React-app-anime/blob/master/src/assets/anime2.png)
+![](https://github.com/abhishek-shivale/React-app-anime/blob/master/src/assets/anime3.png)
+![](https://github.com/abhishek-shivale/React-app-anime/blob/master/src/assets/anime4.png)
 
 ## Overview
 This is a React-based web application for exploring and discovering anime series. It provides a user-friendly interface to browse through episodes, search for specific episodes, and keep track of recent releases. The application is built using React, Tailwind CSS, and Axios.
