@@ -62,7 +62,7 @@ return (
           <div className='h-64 overflow-hidden cursor-[url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"),_auto] rounded-t-md  img-div'>
             <img src={anime.image} alt={anime.title} className=' h-full rounded-t-md  w-full object-cover' />
           </div>
-          <p className='inline release-year-div absolute top-4 right-2 rounded-md px-1 text-sm border border-red-700 bg-red-700'>{anime.releaseDate}</p>
+          <p className='inline release-year-div absolute top-2 right-2 rounded-md px-1 text-sm border border-red-700 bg-red-700'>{anime.releaseDate}</p>
           <div className='bg-black h-16 title-div overflow-hidden rounded-b-md shadow-sm	shadow-white'>
             <p className='text-base title font-extrabold bg-transparent p-3 line-clamp-2'>{anime.title}</p>
           </div>

@@ -8,9 +8,9 @@ function navbar() {
     <div className='flex justify-between bg-gray-950'>
        <Link to='/'> 
        <div className='py-10 px-10 bg-gray-950 ' >
-            <h1 className='text-5xl bg-transparent text-white font-extrabold'>bo<span className='text-red-700 bg-transparent '>X</span>anime</h1>
+            <h1 className='md:text-5xl sm:text-3xl text-2xl bg-transparent text-white font-extrabold'>bo<span className='text-red-700 bg-transparent '>X</span>anime</h1>
         </div> </Link>
-        <div className='py-10 bg-transparent px-10 hidden sm:block'>
+        <div className='py-10 bg-transparent px-10 '>
          <Search />
         </div>
     </div>

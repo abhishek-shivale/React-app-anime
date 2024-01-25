@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './Recent.css'
-
+import axios from 'axios';
 function Recent() {
     const [recent, setRecent] = useState([])
     const [count, setCount] = useState(1)
     const onclick = () => {
         const x = count + 1
-        setCount(x)
+        setCount(x) 
         fetchAnime()
     }
     async function fetchAnime() {
@@ -25,17 +23,19 @@ function Recent() {
     useEffect(() => {
     fetchAnime();
     }, []);
+    
 
 
   return (
     < >
     <h1 className='text-white text-3xl font-extrabold'>Recent :</h1>
-
-<div id='recent-div' className='text-white grid gap-5 mt- grid-cols-[repeat(auto-fit,_minmax(220px,_1fr))]'>
+{console.log(recent)}
+<div id='recent-div' className='text-white grid gap-5 mt-8 grid-cols-[repeat(auto-fit,_minmax(220px,_1fr))]'>
     {recent.map((anime) => (
         <Link key={anime.id} to={`/anime/${anime.title}`}>
             <div id='div-anime-recent' className='w-full '>
                 <div className='h-56 overflow-hidden'>
+                <p className='inline release-year-div relative top-8 left-36 rounded-md px-2 py-2 text-sm border border-red-700 bg-red-700'>{anime.episode}</p>
                     <img src={anime.image} alt={anime.title} className='h-full w-full rounded-t-md object-cover' />
                 </div>
                 <div className='bg-black h-16 overflow-hidden rounded-b-md shadow-sm shadow-white '>
@@ -46,11 +46,19 @@ function Recent() {
     ))}
 </div>
 
-<div className='flex justify-center'>
-    <button className='h-12 w-30 my-20 bg-red-700 text-white px-3 py-2' onClick={onclick}>
-        Load More
-    </button>
-</div>
+{window.addEventListener("scroll", () => {
+    if (
+        window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight
+    ) {
+
+        TIMEOUT_ID = setTimeout(()=>{
+            onclick()
+          },3000)
+          return ()=>clearTimeout(TIMEOUT_ID)
+       
+    }
+})}
 </>
   )
 }

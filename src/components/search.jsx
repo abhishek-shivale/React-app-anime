@@ -47,7 +47,7 @@ function Search() {
           width: '20vw',
           display: isSearchVisible ? 'block' : 'none',
         }}
-        className='bg-black max-w-96 max-h-80 z-10 absolute overflow-scroll'
+        className='bg-black max-w-96 max-h-80 mr-10 min-h-32 min-w-48 z-10 absolute sm:-right-8 -right-16 overflow-scroll'
       >
         {animeSearched.length === 0 ? (
           <p className='bg-transparent text-white'>No results found</p>
@@ -76,7 +76,7 @@ function Search() {
         type='text'
         id='input'
         placeholder='Search Anime'
-        className='max-w-96 max-h-10'
+        className='max-w-96 min-w-16 max-h-10'
         value={input}
       />
       <SearchDiv />

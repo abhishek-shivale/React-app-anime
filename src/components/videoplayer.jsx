@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import Hls from 'hls.js';
-import './VideoPlayer.css';
 
 function VideoPlayer(props) {
   const [url, setUrl] = useState('');

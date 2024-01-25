@@ -45,12 +45,12 @@ useEffect(() => {
     fetchAnimeData();
 }, [cleanAnimeId, cleanEpisodeId], ButtonCompo);
     return (
-  <div className='container m-auto flex max-w-[1300px]'>
-    <div className='basis-4/12 aspect-video'></div>
+  <div className='container m-auto sm:flex max-w-[1300px]'>
+    {/* <div className='basis-4/12 aspect-video'></div> */}
     <div className='w-full' >
      <VideoPlayer url={streamUrl} />
      </div>
-     <div className='bg-black basis-4/12 overflow-scroll   aspect-video scrollbar-hidden '>
+     <div className='bg-black sm:basis-4/12 overflow-scroll aspect-video scrollbar-hidden '>
         <div className='flex flex-wrap bg-black mx-2 my-3'>
         {epArry.map((pop)=>(
             <ButtonCompo  bt={pop} link={cleanAnimeId} />

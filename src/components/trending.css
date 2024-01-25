@@ -4,21 +4,6 @@
 .swiper-pagination-bullet-active{
    background-color: red !important;
 }
-
-.img-div{
-
-}
-.release-year-div{
-
-}
-.title-div{
-
-}
-@media only screen and (max-width: 456px) {
-   .swiper-slide{
-      margin-right: 0;
-   }
- }
  .trading-swipper .swiper-wrapper{
    gap: 20px;
  }
