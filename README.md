@@ -1,6 +1,6 @@
 # Anime Web Application
 
-![Anime Web App](https://github.com/abhishek-shivale/React-app-anime/blob/master/src/assets/anime.png)
+![Anime Web App](https://github.com/abhishek-shivale/React-app-anime/blob/master/src/assets/anime1.png)
 ![](https://github.com/abhishek-shivale/React-app-anime/blob/master/src/assets/anime2.png)
 ![](https://github.com/abhishek-shivale/React-app-anime/blob/master/src/assets/anime3.png)
 ![](https://github.com/abhishek-shivale/React-app-anime/blob/master/src/assets/anime4.png)
