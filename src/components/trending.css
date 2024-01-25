@@ -19,3 +19,6 @@
       margin-right: 0;
    }
  }
+ .trading-swipper .swiper-wrapper{
+   gap: 20px;
+ }

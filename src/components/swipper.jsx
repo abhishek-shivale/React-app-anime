@@ -28,7 +28,8 @@ function SwipperComponent() {
   return (
     <div>
      <Swiper
-        spaceBetween={30}
+        translate={"yes"}
+        spaceBetween={0}
         centeredSlides={true}
         autoplay={{
           delay: 2000,
@@ -40,16 +41,16 @@ function SwipperComponent() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper bg-slate-50  text-white"
+        className="mySwiper  text-white"
       >
         {spotlightAnime.map(anime => ( 
-          <SwiperSlide key={anime.id} className='h-96 w-full '>
+          <SwiperSlide key={anime.id} className='h-96 w-full mt-2 '>
           <div className="image-wrapper">
           <img src={anime.bannerImage === null ? anime.coverImage.extraLarge : anime.bannerImage} alt="Banner" className='img' />
           <div className="shadow" ></div>
         </div>
         <div className='absolute top-[35%] left-[4%] bg-transparent z-40 h-22 rounded-md w-80'>
-          <p className='bg-transparent text-2xl '>{anime.title.english}</p>
+          <p className='bg-transparent text-2xl font-bold '>{anime.title.english}</p>
           <p className='inline rounded-md px-1 text-sm border bg-transparent'>HD</p>
           <p className='inline rounded-md px-1 mx-3 text-sm border bg-transparent'>{anime.format}</p>
           <p className='inline rounded-md px-1 text-sm border border-red-700 bg-red-700'>{anime.status}</p>

@@ -34,6 +34,7 @@ const AnimeInfo = () => {
     )
   }
   const fetchAnime = async ()=>{
+   try {
     const res = await axios(`https://api.abhishekshivale45.workers.dev/anime/${cleanedAnimeId}`)
     const animeData = res.data.results;
     setanimes(animeData);
@@ -42,6 +43,9 @@ const AnimeInfo = () => {
       setgenre(genarry);
     }
    setEp(animeData.episodes.length); 
+   } catch (error) {
+    console.log(error);
+   }
   }
   useEffect(()=>{
     fetchAnime()

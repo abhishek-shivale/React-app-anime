@@ -54,7 +54,7 @@ function Search() {
         ) : (
           animeSearched.map((anime) => (
             <Link key={anime.id} to={`/anime/anime=${anime.title}`}>
-              <div className='flex p-2 bg-transparent'>
+              <div className='flex p-2 bg-gray-950'>
                 <div className='h-16 w-14 overflow-hidden bg-transparent'>
                   <img className='w-full h-full object-cover bg-transparent' src={anime.img} alt={anime.title} />
                 </div>

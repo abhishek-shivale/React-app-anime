@@ -31,14 +31,14 @@ function Recent() {
     < >
     <h1 className='text-white text-3xl font-extrabold'>Recent :</h1>
 
-<div id='recent-div' className='text-white flex w-full  flex-wrap'>
+<div id='recent-div' className='text-white grid gap-5 mt- grid-cols-[repeat(auto-fit,_minmax(220px,_1fr))]'>
     {recent.map((anime) => (
         <Link key={anime.id} to={`/anime/${anime.title}`}>
-            <div id='div-anime-recent' className='h-80 w-max'>
-                <div className='h-56 w-48 overflow-hidden'>
-                    <img src={anime.image} alt={anime.title} className='my-5 h-full w-full object-cover' />
+            <div id='div-anime-recent' className='w-full '>
+                <div className='h-56 overflow-hidden'>
+                    <img src={anime.image} alt={anime.title} className='h-full w-full rounded-t-md object-cover' />
                 </div>
-                <div className='bg-black h-16 w-48 overflow-hidden'>
+                <div className='bg-black h-16 overflow-hidden rounded-b-md shadow-sm shadow-white '>
                     <p className='text-base title font-extrabold bg-transparent p-3 line-clamp-2'>{anime.title}</p>
                 </div>
             </div>
