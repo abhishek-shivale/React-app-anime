@@ -20,7 +20,10 @@ function Watchanime() {
     const arry = text[0];
     return (
       <>
-        <Link to={`/watch/animeid=${props.link}/episodes=${arry}`}>
+        <Link
+          onClick={() =>
+            (window.location.href = `/watch/animeid=${props.link}/episodes=${arry}`)
+          }>
           <div className="flex">
             <button className="text-white h-10 w-14 border">{arry}</button>
           </div>
