@@ -13,6 +13,9 @@
 .plyr div {
   background-color: transparent;
 }
+.plyr__menu__container {
+  background-color: white !important;
+}
 /* .plyr .plyr__controls {
   background-color: transparent;
 }
