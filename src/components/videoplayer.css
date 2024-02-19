@@ -1,0 +1,36 @@
+--plyr-video-background {
+  background-color: rgba(0, 0, 0, 1);
+}
+.plyr__control--overlaid {
+  background-color: red;
+}
+:root {
+  --plyr-color-main: rgb(153, 5, 5);
+}
+.plyr svg {
+  background-color: transparent;
+}
+.plyr div {
+  background-color: transparent;
+}
+/* .plyr .plyr__controls {
+  background-color: transparent;
+}
+*/
+div[role="menu"] {
+  background-color: white;
+}
+#root
+  > div.container.m-auto.sm\:flex.max-w-\[1300px\]
+  > div.w-full.bg-none
+  > div
+  > div.plyr__controls
+  > div.plyr__controls__item.plyr__progress__container {
+  background-color: transparent;
+}
+.plyr div .plyr__controls__item {
+  background-color: transparent;
+}
+.plyr span {
+  background-color: transparent;
+}
