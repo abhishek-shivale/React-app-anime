@@ -3,6 +3,7 @@ import Hls from "hls.js";
 import Plyr from "plyr";
 import "plyr-react/plyr.css";
 import "./videoplayer.css";
+
 function VideoPlayer(props) {
   const [url, setUrl] = useState(props.url);
   const videoRef = useRef(null);
@@ -17,17 +18,14 @@ function VideoPlayer(props) {
 
     if (!video || !url) return;
 
-    // Initialize HLS.js if supported
     if (Hls.isSupported()) {
       const hls = new Hls();
       hls.loadSource(url);
       hls.attachMedia(video);
 
-      // Listen for manifest parsed event to get available qualities
       hls.on(Hls.Events.MANIFEST_PARSED, (event, data) => {
         const availableQualities = hls.levels.map((l) => l.height);
 
-        // Construct Plyr quality options
         const qualityOptions = {
           quality: {
             default: availableQualities[0],
@@ -36,13 +34,32 @@ function VideoPlayer(props) {
             onChange: (quality) => handleQualityChange(quality),
           },
         };
-
-        // Initialize Plyr with quality options
-        player = new Plyr(video, { ...qualityOptions });
+        player = new Plyr(video, {
+          controls: [
+            "play",
+            "progress",
+            "current-time",
+            "mute",
+            "volume",
+            "settings",
+            "fullscreen",
+          ],
+          ...qualityOptions,
+        });
       });
     } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
       video.src = url;
-      player = new Plyr(video);
+      player = new Plyr(video, {
+        controls: [
+          "play",
+          "progress",
+          "current-time",
+          "mute",
+          "volume",
+          "settings",
+          "fullscreen",
+        ],
+      });
     }
 
     return () => {
@@ -56,7 +73,11 @@ function VideoPlayer(props) {
     console.log("Selected quality:", quality);
   };
 
-  return <video ref={videoRef} className="plyr video" />;
+  return (
+    <div>
+      <video ref={videoRef} className="plyr video" />
+    </div>
+  );
 }
 
 export default VideoPlayer;

@@ -24,7 +24,7 @@ div[role="menu"] {
   background-color: white;
 }
 span {
-  background-color: white!important;
+  background-color: white !important;
 }
 #root
   > div.container.m-auto.sm\:flex.max-w-\[1300px\]
@@ -39,4 +39,7 @@ span {
 }
 .plyr span {
   background-color: transparent;
+}
+.plyr div .plyr__controls__item :hover {
+  background: transparent;
 }
