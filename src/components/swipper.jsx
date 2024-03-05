@@ -14,7 +14,7 @@ function SwipperComponent() {
 
   async function fetchAnime() {
     try {
-      const res = await axios.get('https://api.abhishekshivale45.workers.dev/home/');
+      const res = await axios.get('https://animedexapi.abhishekshivale45.workers.dev/home/');
       setSpotlightAnime(res.data.results.anilistTrending);
     } catch (err) {
       console.error(err.message);

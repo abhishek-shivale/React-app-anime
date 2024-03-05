@@ -45,14 +45,16 @@ function Watchanime() {
     async function fetchAnimeData() {
       try {
         const episodeResponse = await axios.get(
-          `https://api.abhishekshivale45.workers.dev/episode/${cleanAnimeId}-episode-${cleanEpisodeId}`
+          `https://animedexapi.abhishekshivale45.workers.dev/episode/${cleanAnimeId}-episode-${cleanEpisodeId}`
         );
         const animeResponse = await axios.get(
-          `https://api.abhishekshivale45.workers.dev/anime/${cleanAnimeId}`
+          `https://animedexapi.abhishekshivale45.workers.dev/anime/${cleanAnimeId}`
         );
         const epdata = episodeResponse.data.results.stream.sources[0].file;
         setStreamUrl(epdata);
         let len = animeResponse.data.results.episodes;
+        console.log(animeResponse.data.results);
+        console.log(len);
         setepArry(len);
       } catch (error) {
         console.error("Error fetching data:", error.message);

@@ -11,7 +11,7 @@ function Recent() {
     }
     async function fetchAnime() {
         try {
-            const res = await axios.get(`https://api.abhishekshivale45.workers.dev/recent/${count}`);
+            const res = await axios.get(`https://animedexapi.abhishekshivale45.workers.dev/recent/${count}`);
              
             setRecent((pre)=>[...pre, ...res.data.results]);
             console.log(recent);

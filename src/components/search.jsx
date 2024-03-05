@@ -11,7 +11,7 @@ function Search() {
   let TIMEOUT_ID ;
    const fetchSearchAnime = async ()=>{
       try {
-        const res = await axios(`https://api.abhishekshivale45.workers.dev/search/${input}`);
+        const res = await axios(`https://animedexapi.abhishekshivale45.workers.dev/search/${input}`);
         setAnimeSearched(res.data.results);
         console.log(res.data.results);
       } catch (error) {

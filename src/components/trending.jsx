@@ -10,7 +10,7 @@ function Trending() {
   const [spotlightAnime, setSpotlightAnime] = useState([]);
   async function fetchAnime() {
     try {
-      const res = await axios.get('https://api.abhishekshivale45.workers.dev/gogoPopular/');
+      const res = await axios.get('https://animedexapi.abhishekshivale45.workers.dev/gogoPopular/');
       setSpotlightAnime(res.data.results);
     } catch (err) {
       console.error('Error fetching anime:', err);

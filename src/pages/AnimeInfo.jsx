@@ -41,7 +41,7 @@ const AnimeInfo = () => {
 
   const fetchAnime = async () => {
     try {
-      const res = await axios(`https://api.abhishekshivale45.workers.dev/anime/${cleanedAnimeId}`);
+      const res = await axios(`https://animedexapi.abhishekshivale45.workers.dev/anime/${cleanedAnimeId}`);
       const animeData = res.data.results;
       setanimes(animeData);
         const genarry = animeData.genre.split(', ');
